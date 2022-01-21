@@ -1,0 +1,5 @@
+package telegram
+
+func init() {
+
+}
