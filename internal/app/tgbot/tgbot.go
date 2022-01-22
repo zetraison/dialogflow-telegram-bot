@@ -5,9 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/sirupsen/logrus"
-
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
+	"github.com/sirupsen/logrus"
 )
 
 type tgBot struct {

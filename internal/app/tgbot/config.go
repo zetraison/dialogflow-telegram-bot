@@ -25,19 +25,19 @@ func NewConfig() *Config {
 func (c *Config) LoadFromEnv() error {
 	if len(c.GoogleApplicationCredentials) == 0 {
 		if len(os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")) == 0 {
-			log.Fatal("GOOGLE_APPLICATION_CREDENTIALS env variable not set!")
+			log.Fatal("GoogleApplicationCredentials config not set!")
 		}
 		c.GoogleApplicationCredentials = os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")
 	}
 	if len(c.GoogleCloudProjectID) == 0 {
 		if len(os.Getenv("GOOGLE_CLOUD_PROJECT_ID")) == 0 {
-			log.Fatal("GOOGLE_CLOUD_PROJECT_ID env variable not set!")
+			log.Fatal("GoogleCloudProjectID config not set!")
 		}
 		c.GoogleCloudProjectID = os.Getenv("GOOGLE_CLOUD_PROJECT_ID")
 	}
 	if len(c.TelegramApiToken) == 0 {
 		if len(os.Getenv("TELEGRAM_API_TOKEN")) == 0 {
-			log.Fatal("TELEGRAM_API_TOKEN env variable not set!")
+			log.Fatal("TelegramApiToken config not set!")
 		}
 		c.TelegramApiToken = os.Getenv("TELEGRAM_API_TOKEN")
 	}

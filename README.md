@@ -12,27 +12,11 @@ Telegram Bot based on [Google Dialogflow ES](https://cloud.google.com/dialogflow
 ## Install modules
 
 ```bash
-go mod tidy
+make install
 ```
 
-## Build
+## Build and run
 
 ```bash
-go build -v ./cmd/tgbot
-```
-
-## Run
-
-```bash 
-export \
-TELEGRAM_API_TOKEN={TELEGRAM_API_TOKEN} \ 
-GOOGLE_CLOUD_PROJECT_ID={GOOGLE_CLOUD_PROJECT_ID} \
-GOOGLE_APPLICATION_CREDENTIALS={GOOGLE_APPLICATION_CREDENTIALS} 
-&& ./tgbot
-```
-
-or
-
-```bash 
-./tgbot --config-path ./config/tgbot.toml
+make up
 ```
