@@ -18,11 +18,21 @@ go mod tidy
 ## Build
 
 ```bash
-go build -o bot
+go build -v ./cmd/tgbot
 ```
 
 ## Run
 
 ```bash 
-export TELEGRAM_API_TOKEN={TELEGRAM_API_TOKEN} GOOGLE_CLOUD_PROJECT_ID={GOOGLE_CLOUD_PROJECT_ID} GOOGLE_APPLICATION_CREDENTIALS={GOOGLE_APPLICATION_CREDENTIALS} && ./bot
+export \
+TELEGRAM_API_TOKEN={TELEGRAM_API_TOKEN} \ 
+GOOGLE_CLOUD_PROJECT_ID={GOOGLE_CLOUD_PROJECT_ID} \
+GOOGLE_APPLICATION_CREDENTIALS={GOOGLE_APPLICATION_CREDENTIALS} 
+&& ./tgbot
+```
+
+or
+
+```bash 
+./tgbot --config-path ./config/tgbot.toml
 ```
