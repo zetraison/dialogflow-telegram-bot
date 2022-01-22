@@ -1,11 +1,9 @@
-package google
+package tgbot
 
 import (
 	"context"
-	"crypto/sha256"
 	"errors"
 	"fmt"
-	"strconv"
 
 	dialogflow "cloud.google.com/go/dialogflow/apiv2"
 	dialogflowpb "google.golang.org/genproto/googleapis/cloud/dialogflow/v2"
@@ -14,12 +12,6 @@ import (
 const (
 	RuLanguageCode = "ru"
 )
-
-func SessionFromUserID(ID int) string {
-	bs := []byte(strconv.Itoa(ID))
-	hash := sha256.Sum256(bs)
-	return fmt.Sprintf("%x", hash[:])
-}
 
 func DetectIntentText(ctx context.Context, projectID, sessionID, text, languageCode string) (string, error) {
 	sessionClient, err := dialogflow.NewSessionsClient(ctx)

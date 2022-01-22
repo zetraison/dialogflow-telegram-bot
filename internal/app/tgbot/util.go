@@ -1,4 +1,4 @@
-package internal
+package tgbot
 
 import (
 	"crypto/sha256"
@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func sessionFromUserID(ID int) string {
+func sha256HashFromInt(ID int) string {
 	bs := []byte(strconv.Itoa(ID))
 	hash := sha256.Sum256(bs)
 	return fmt.Sprintf("%x", hash[:])

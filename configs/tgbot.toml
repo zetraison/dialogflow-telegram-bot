@@ -1,0 +1,4 @@
+google_application_credentials=""
+google_console_project_id=""
+log_level="debug"
+telegram_api_token=""
